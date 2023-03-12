@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
+    <header>
+      <h1>Campo Minato</h1>
+      <img id="logo" src="./img/logo.png" alt="" />
+      <div id="header-right">
+        <select name="level" id="level">
+          <option value="1">Easy</option>
+          <option value="2">Hard</option>
+          <option value="3">Crazy</option>
+        </select>
+        <button id="btn-new-game">New Game</button>
+      </div>
+    </header>
+    <main>
+      <div id="container-centered">
+        <div id="game-table"></div>
+        <div id="score"></div>
+      </div>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>

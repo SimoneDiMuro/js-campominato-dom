@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: white;
+  height: 90px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  width: 80px;
+  height: 80px;
+}
+header #header-right {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+header #header-right #level {
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+header #header-right #level:hover {
+  cursor: pointer;
+}
+
+header #header-right #btn-new-game {
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+
+header #header-right #btn-new-game:hover {
+  cursor: pointer;
+}
+
+main {
+  background-color: lightgreen;
+}
+
+main #container-centered {
+  max-width: 1000px;
+  height: calc(100vh - 90px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* game-table */
+main #container-centered #game-table {
+  width: 80%;
+  aspect-ratio: 1;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main #container-centered #game-table .square {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+main #container-centered #game-table .square:not(.active):hover {
+  cursor: pointer;
+}
+
+main #container-centered #game-table .square.active:hover {
+  pointer-events: none;
+}
+
+main #container-centered #game-table .square.active {
+  background-color: lightblue;
+}
+
+main #container-centered #game-table .square.bomb.active {
+  background-color: red;
+}
+
+main #container-centered #score {
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+}
+
+main #container-centered #score strong {
+  font-size: 3rem;
+}
